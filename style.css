@@ -1,0 +1,76 @@
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+background:url('https://cdn.discordapp.com/attachments/1055723465585467465/1187463350632861696/a_logo_kalakaa_12_cleanup.png?ex=6596fa6c&is=6584856c&hm=a1915c65075dc473489354ceb55c114879c84db05983d8073fb7ca595bfade91&');
+          
+        }
+
+        .box {
+            width: 40% auto;
+            height: 40% auto;
+            border: 1px solid #ffffff;
+            overflow: hidden;
+            transform:  rotatez(5deg);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
+            transition: transform 0.9s ;
+        }
+
+         .box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://cdn.discordapp.com/avatars/613165863692009482/462974f11da828d5e25e3079defa909a.png?size=1024') 
+    center/cover;
+    filter: blur(1px);
+    pointer-events: none;
+            z-index: -1;
+         }
+
+        .box:hover {
+            transform: scale(1.9);
+        }
+
+.box-content {
+    position: relative;
+    z-index: 1; /* Ensure the content is above the pseudo-element */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 { text-align: center;
+   margin: 10px;
+  color: #1b1d1b;
+  text-shadow: 
+  -1px -1px 0 #8c8c8c,  
+   1px -1px 0 #303030;
+}
+
+
+button { text-align: center;
+  margin-left : 60px;
+  margin-bottom: 5px;
+  background-color: #479541 ;
+  color: #ffffff;
+  border: none;
+      
+}
+
+input { text-align: center;
+  margin : 10px;
+  background-color: #d6d6d6 ;
+  color: #ffffff;
+  border: none;
+       
+
+}
