@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <title>replit</title>
-  <link href="box.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Checker</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+        
+    </style>
+    
 </head>
 <body>
-  
- <div class="box">
-   
-   
-   <h1> KALAKAAR </h1>
-    <input type="text" id="textInput" placeholder="Type here">
-    <button onclick="checkTextLength()">Submit</button>
-   <p>Result: <span id="result"></span></p>
-    
-</div>
-  
+    <div class="box">
+        <h1>
+        <label for="wordInput"><b>KALAKAAR</b> </label><br></h1>
+        <input type="text" id="wordInput" placeholder="say my name">
+      <br><br>
+        <button onclick="checkWord()">Submit</button><br><br>
+        <div id="result"></div>
+    </div>
  
-  
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
+
