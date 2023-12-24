@@ -110,7 +110,7 @@ button {
   text-align: center;
   margin-left: 65px;
   margin-bottom: 5px;
-  background-color: #479541;
+  background-color: rgba(0, 0, 0, 0.1);
   color: #ffffff;
   border: none;
   font-family: 'Courier New', monospace;
