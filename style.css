@@ -1,76 +1,136 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  background: linear-gradient(to bottom, #8305e3, #7a0ff5);
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            background: linear-gradient(to bottom , #8305e3 , #7a0ff5 );
-          
-        }
+}
 
-        .box {
-            width: 40% auto;
-            height: 40% auto;
-            border: 1px solid #ffffff;
-            overflow: hidden;
-            transform:  rotatez(5deg);
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.9);
-            transition: transform 0.9s ;
-        }
+nav {
+  background: linear-gradient(to bottom right, #c9c9c9, #737373);
+  position: fixed;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5em;
+}
 
-         .box::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://cdn.discordapp.com/avatars/613165863692009482/462974f11da828d5e25e3079defa909a.png?size=1024') 
-    center/cover;
-    filter: blur(1px);
-    pointer-events: none;
-            z-index: -1;
-         }
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-        .box:hover {
-            transform: scale(1.9);
-        }
+nav .logo a {
+  color: #8305e3;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  margin-left: 0;
+
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a.active {
+  background-color: #f0f0f0;
+}
+
+.box {
+  width: 200px;
+  height: 300px;
+  margin-top: 15%;
+  background: linear-gradient(to bottom right, #c9c5c5, #737373);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.9s;
+
+}
+
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.box:hover {
+  transform: scale(1.1);
+}
 
 .box-content {
-    position: relative;
-    z-index: 1; /* Ensure the content is above the pseudo-element */
-    color: white;
-    text-align: center;
-    padding: 20px;
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-h1 { text-align: center;
-   margin: 10px;
+h1 {
+  text-align: center;
+  margin: 10px;
   color: #1b1d1b;
-  text-shadow: 
-  -1px -1px 0 #8c8c8c,  
-   1px -1px 0 #303030;
+  font-family: 'Courier New', monospace;
+
 }
 
 
-button { text-align: center;
-  margin-left : 60px;
+button {
+  text-align: center;
+  margin-left: 65px;
   margin-bottom: 5px;
-  background-color: #479541 ;
+  background-color: #479541;
   color: #ffffff;
   border: none;
-      
+  font-family: 'Courier New', monospace;
+
+
 }
 
-input { text-align: center;
-  margin : 10px;
-  background-color: #d6d6d6 ;
+input {
+  text-align: center;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
   color: #ffffff;
-  border: none;
-       
+  border: solid 1px #ffffff;
 
+
+}
+
+#result {
+  color: white;
+  font-family: 'Courier New', monospace;
+  margin-right: 20%;
+  margin-left: 20%;
 }
