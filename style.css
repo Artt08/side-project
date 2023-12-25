@@ -1,3 +1,18 @@
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  /* make horizontally */
+}
+
+li {
+  display: inline-block;
+    }
+
+:root {
+  --max-width: 960px
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -27,6 +42,7 @@ nav {
 
 .nav__content {
   max-width: var(--max-width);
+  height: 25px;
   margin: auto;
   padding: 1rem 1rem;
   display: flex;
@@ -46,91 +62,59 @@ nav .logo a {
   width: 120px;
   height: auto;
   margin-left: 0;
+  transition: transform 0.9s;
+  }
 
+.logo img:hover{
+  transform: rotateZ(360deg); /* Scale up on hover */
 }
-
 nav a {
   display: inline-block;
   padding: 15px 20px;
   text-decoration: none;
   color: black;
+  transition: color 0.3s, transform 0.9s;
+}
+nav a:hover {
+  color: #a0720d; /* Change color on hover */
+  transform: scale(1.2); /* Scale up on hover */
 }
 
-nav a.active {
-  background-color: #f0f0f0;
-}
-
-.box {
+#sidebar {
+  height: 100vh;
   width: 200px;
-  height: 300px;
-  margin-top: 15%;
-  background: linear-gradient(to bottom right, #c9c5c5, #737373);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  transition: transform 0.9s;
-
-}
-
-
-.box::after {
-  content: "";
-  position: absolute;
+  position: fixed;
+  margin-top: 80px;
+  left: -200px;
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: -1;
+  background: linear-gradient(to bottom right, #c9c9c9, #737373);
+  transition: left 0.9s ease;
 }
 
-.box:hover {
-  transform: scale(1.1);
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.box-content {
-  position: relative;
-  z-index: 1;
-  color: white;
+#sidebar ul li {
+  padding: 15px;
   text-align: center;
-  padding: 20px;
+  border-bottom: 1px solid #555;
 }
 
-h1 {
-  text-align: center;
-  margin: 10px;
-  color: #1b1d1b;
-  font-family: 'Courier New', monospace;
-
+#toggle-btn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  
+  cursor: pointer;
+  z-index: 100;
+  color: #050505;
 }
 
-
-button {
-  text-align: center;
-  margin-left: 65px;
-  margin-bottom: 5px;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #ffffff;
-  border: none;
-  font-family: 'Courier New', monospace;
-
-
-}
-
-input {
-  text-align: center;
-  margin: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #ffffff;
-  border: solid 1px #ffffff;
-
-
-}
-
-#result {
-  color: white;
-  font-family: 'Courier New', monospace;
-  margin-right: 20%;
-  margin-left: 20%;
+#content {
+  margin-left: 200px;
+  padding: 16px;
+  transition: margin-left 0.9s ease;
 }
